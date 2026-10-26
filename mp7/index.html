@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FrontDesk Chat — AI Replacement Story</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="phone">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-emoji">🏨</span>
+        <span>FrontDesk Chat <small>· AI replacement story</small></span>
+      </div>
+      <span class="model-badge" id="modelBadge">GLM-5.3-Flash</span>
+    </header>
+
+    <section class="partner-bar" id="partnerBar">
+      <span class="avatar" id="partnerAvatar">🧑‍🦰</span>
+      <div class="partner-meta">
+        <span class="partner-name" id="partnerName">Sarah · Guest</span>
+        <span class="partner-status" id="partnerStatus">via TripEase · AI customer service</span>
+      </div>
+      <span class="partner-badge" id="partnerBadge">TripEase AI customer</span>
+    </section>
+
+    <main class="chat-window" id="chatWindow"></main>
+
+    <!-- AI-suggested replies: pick one of three -->
+    <div class="suggestions" id="suggestions"></div>
+
+    <form class="chat-form" id="chatForm">
+      <input
+        id="chatInput"
+        class="chat-input"
+        type="text"
+        placeholder="Please hold…"
+        autocomplete="off"
+        disabled
+      />
+      <button id="sendBtn" class="send-btn" type="submit" disabled>➤</button>
+    </form>
+
+    <footer class="footer">
+      <button id="restartBtn" class="restart-btn">↺ Restart</button>
+    </footer>
+
+    <aside class="takeover-card">
+      <h2>AI Takeover</h2>
+      <div class="meter">
+        <div class="meter-fill" id="meterFill"></div>
+      </div>
+      <div class="meter-label" id="meterLabel">AI Takeover · 0%</div>
+      <div class="stat-row"><span>Handled by you</span><b id="statYou">0</b></div>
+      <div class="stat-row"><span>Handled by AI</span><b id="statAi">0</b></div>
+      <div class="stat-row"><span>Picked from AI suggestions</span><b id="statDraft">0</b></div>
+    </aside>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
