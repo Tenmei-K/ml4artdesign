@@ -1,0 +1,49 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "classroom/qwen-a3b",
+  "providers": {
+    "classroom": {
+      "name": "Classroom GPU",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "https://gpu1.gohai.xyz:8080/v1"
+      },
+      "models": {
+        "qwen-a3b": {
+          "modelID": "Qwen3.6-35B-A3B-coding",
+          "name": "Qwen3.6 35B-A3B (class)",
+          "capabilities": {
+            "tools": true,
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 98304,
+            "output": 32768
+          }
+        },
+        "qwen-27b": {
+          "modelID": "Qwen3.8-27B-coding",
+          "name": "Qwen3.8 27B (out of class)",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 131072,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "servers": {
+      "cam": {
+        "type": "remote",
+        "url": "http://laptop.gohai.xyz:3001/mcp"
+      }
+    }
+  }
+}
